@@ -16,6 +16,8 @@ public class EmpleadoDTO {
 	private String apellido;
 	private int edad;
 	private Long id_cargo;
+	private String email;
+	private String password;
 	private String fecha_ingreso_empresa;
 
 }

@@ -41,13 +41,18 @@ public class Empleado implements Serializable {
 	
 	@Column(name = "fecha_ingreso_empresa")
 	private String fecha_ingreso_empresa;
-	
+
+	@Column(name = "email")
+	private String email;
+
+	@Column(name = "password")
+	private String password;
 		
 	public Empleado (Long id) {
 		this.id = id;
 	}
 	
-	public Empleado(Long id, String nombre, String apellido, int edad, long id_cargo, String fecha_ingreso_empresa) {
+	public Empleado(Long id, String nombre, String apellido, int edad, long id_cargo, String fecha_ingreso_empresa, String email, String password) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -55,6 +60,8 @@ public class Empleado implements Serializable {
 		this.edad = edad;
 		this.id_cargo = id_cargo;
 		this.fecha_ingreso_empresa = fecha_ingreso_empresa;
+		this.email = email;
+		this.password = password;
 	}
 
 	public Empleado() {

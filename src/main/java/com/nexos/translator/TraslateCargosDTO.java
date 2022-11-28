@@ -11,9 +11,9 @@ public class TraslateCargosDTO implements Translator<Cargos, CargosDTO> {
 	@Override
 	public CargosDTO translate(Cargos cargos) {
 		
-		CargosDTO imput = new CargosDTO();
-		imput.setId(cargos.getId());
-		imput.setCargo(cargos.getCargo());
-		return imput;
+		return CargosDTO.builder()
+				.id(cargos.getId())
+				.cargo(cargos.getCargo())
+				.build();
 	}
 }
